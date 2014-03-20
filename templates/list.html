@@ -1,0 +1,22 @@
+
+{% block mainContent %}
+<div>
+<h2>List of Data Sets</h2>
+
+{% if datasets %}
+<table>
+<tr>
+    <th>Name</th>
+    <th>Set population size</th>
+</tr>
+{% for ds in datasets %}
+<tr>
+    <td>ds.name</td>
+    <td>ds.participants</td>
+</tr>
+</table>
+{% else %}
+<p> There are currently no data sets. </p>
+{% endif %}
+</div>
+{% endblock %}
